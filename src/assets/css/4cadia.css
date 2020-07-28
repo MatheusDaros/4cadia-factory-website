@@ -1,0 +1,256 @@
+/* Contact - section style */
+#section-contact {
+  width: 100%;
+  height: 45vh;
+  background: #071d49;
+  border-bottom: 1px solid #eae9e9;
+  color: #6ad1e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-content h3 {
+  margin: 0px 0px 30px 0px;
+  font-size: 45px;
+}
+
+.contact-info p,
+.contact-info a {
+  margin: 10px 0px 10px 0px;
+}
+
+.contact-info strong {
+  font-size: 20px;
+}
+
+.contact-content {
+  width: 940px;
+  font-size: 16px;
+}
+
+.contact-info {
+  display: flex;
+  width: 60%;
+}
+
+/* Banner - section style */
+#section-banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content {
+  width: 940px;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  margin: auto;
+}
+
+.banner-content h1 {
+  font-size: 3.2em;
+  line-height: 75px;
+  margin: 50px 0 0 0;
+}
+
+.banner-content p {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 48px;
+}
+
+#banner-logo {
+  z-index: 2;
+}
+
+.banner-background {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+/* Banner - Responsive */
+@media screen and (max-width: 768px) {
+
+  #section-banner {
+    height: 100vh;
+    /* height: 180vw; */
+  }
+
+  .banner-content {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    padding: 0 30px;
+  }
+
+  .banner-content h1 {
+    font-size: 2em;
+    line-height: 1.5em;
+    margin: 50px 0 0;
+  }
+
+  #banner-logo {
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    height: auto;
+    filter: drop-shadow(5px 5px 5px #071d49c7);
+  }
+
+  /* Responsive Newsletter */
+  .validate {
+    width: 90%;
+  }
+
+  .section-newsletter {
+    padding-top: 45px !important;
+    background: none !important;
+  }
+
+  .section-newsletter .section-subtitle {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+/* About - section style */
+#section-about {
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.about-content {
+  width: 50em;
+  margin: auto;
+  text-align: center;
+  line-height: 34px;
+}
+
+.about-content h1 {
+  color: #071D49;
+  padding: 1em;
+}
+
+.about-content p {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.symbol-c {
+  width: 160px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.symbol-a {
+  width: 160px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Newsletter - section style */
+.section-newsletter {
+  width: 100%;
+  text-align: center;
+  background: url('../images/newsletter.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% + 250px);
+  background-size: auto 90%;
+  padding-top: 100px;
+}
+
+.section-newsletter .section-title {
+  color: #071D49;
+  font-size: 2.750em;
+}
+
+.section-newsletter .section-subtitle {
+  color: #071D49;
+  font-size: 1.750em;
+}
+
+.section-newsletter .section-subtitle span {
+  color: #0047BB;
+}
+
+.section-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.section-subscribe form {
+  width: 60%;
+}
+
+.section-newsletter input {
+  width: 90%;
+  height: 50px;
+  font-size: 18px;
+  border: 1px solid #C6CACC;
+  border-radius: 4px;
+  padding: 0 15px;
+  margin-top: 0.8em;
+}
+
+.section-newsletter .card-section--button {
+  width: 253px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  background: #6AD1E3;
+  margin: 2.5em;
+}
+
+.section-newsletter .card-section--button:hover {
+  background: #0047BB;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+
+  .symbol-c {
+    width: 94px;
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    top: 5px;
+  }
+
+  .symbol-a {
+    width: 94px;
+    right: -20px;
+  }
+
+  .about-content p {
+    font-size: 1.25em;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+  }
+
+  #section-projects {
+    margin: 0px;
+  }
+
+  .section-newsletter .card-section--button {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}

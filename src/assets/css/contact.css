@@ -1,0 +1,145 @@
+
+
+@media (min-width:300px) {
+    .contact
+    {
+        width: 90% !important;
+        margin-top: 60px !important;
+
+    }
+}
+@media (min-width:768px) {
+    .contact
+    {
+        width: 50% !important;
+        margin-top: 60px !important;
+
+    }
+}
+@media (min-width:992px) {
+    .contact
+    {
+        width: 30% !important;
+        margin-top: 60px !important;
+
+    }
+}
+@media (min-width:1200px) {
+    .contact
+    {
+        width: 30% !important;
+    }
+}
+
+
+
+#section-banner {
+    align-items: baseline;
+}
+
+.banner-content {
+    margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 20px 5px;
+}
+
+.formcontact {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formcontact__input {
+    width: 90%;
+    height: 50px;
+    font-size: 18px;
+    border: 1px solid #C6CACC;
+    border-radius: 4px;
+    padding: 0 15px;
+    margin-top: 0.8em;
+}
+
+.formcontact__textarea{
+    width: 90%;
+    height: 200px;
+    font-size: 18px;
+    border: 1px solid #C6CACC;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-top: 0.8em;
+}
+
+.formcontact__submit {
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    background: #6AD1E3;
+    margin-top: 30px;
+}
+
+.contact__header {
+    width: 70%;
+}
+
+.contact__header__title{
+    margin: 0;
+    border-bottom: 1px solid #071D49;
+    padding-bottom: 20px;
+    color: #071D49;
+    text-align: center;
+}
+.contact__header__text{
+    text-align: center;
+    font-size: 1.25em !important;
+    line-height: 1.5rem !important;
+    color: black;
+    font-weight: normal !important;
+}
+
+.formcontact__validation{
+    display: none;
+    width: 90%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.formcontact__text--alert {
+    font-size: 0.8rem;
+    color: #ff0000d6;
+    font-weight: normal;
+    margin: 0;
+    line-height: 20px;
+}
+
+.messages--failure, .messages--success {
+    text-align: center;
+    display: none;
+}
+
+.messages--success {
+    color: #0b2e13;
+}
+
+.messages--failure {
+    color: #ff0000d6;
+}

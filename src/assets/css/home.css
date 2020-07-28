@@ -1,0 +1,143 @@
+/* Banner - section style */
+#section-banner {
+  background-image: url(../images/Rectangle.jpg);
+  background-size: cover;
+}
+
+.card-section--box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 45px 0px;
+}
+
+#section-mission .card-section--subtitle {
+  font-size: 2.2em;
+}
+
+#section-mission .card-section--text {
+  width: 60%;
+  /* padding-top: 45px; */
+  text-align: center;
+}
+
+#section-mission .card-section--image {
+  /* width: 40%; */
+}
+
+#section-mission .card-section--image img {
+  /* width: auto; */
+}
+
+.card-section {
+  max-width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-section--text {
+  color: #071D49;
+  width: 50%;
+  margin: auto;
+}
+
+.card-section--subtitle {
+  font-size: 1.25em;
+}
+
+.card-section--text h3 {
+  font-size: 2em;
+}
+
+.title-foundation {
+  color: #0047BB;
+}
+
+.title-factory {
+  color: #071D49;
+}
+
+.card-section--button {
+  width: 253px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn-factory {
+  background: #071D49;
+}
+
+.btn-factory:hover {
+  background: #0047BB;
+  transition: 0.3s;
+}
+
+.btn-foundation {
+  background: #0047BB;
+}
+
+.btn-foundation:hover {
+  background: #071D49;
+  transition: 0.3s;
+}
+
+.card-section--image {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  max-height: 65vh;
+  width: 100%;
+}
+
+@media (max-width: 768px)
+{
+ .card-section {
+   flex-direction: column;
+  }
+
+  .card-section--text {
+    width: 90%;
+    padding: 0px 0px 66px;
+  }
+
+  .card-section.info p {
+    text-align: center;
+    font-size: 28px;
+
+  }
+
+  .card-section.info {
+    flex-direction: column-reverse;
+  }
+
+  #section-target-factory {
+    flex-direction: column-reverse;
+
+  }
+
+  .card-section--image {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .card-image {
+    max-height: 85vh;
+    width: 90%;
+    padding: 0px 0px 40px;
+  }
+
+
+}
+
