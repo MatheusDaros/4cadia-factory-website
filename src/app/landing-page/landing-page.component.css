@@ -1,5 +1,8 @@
-@import "../../assets/css/reset.css";
-@import "../../assets/css/style.css";
-@import "../../assets/css/4cadia.css";
-@import "../../assets/css/factory.css";
 
+.hideScroll {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.hideScroll::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
