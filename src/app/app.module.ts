@@ -7,20 +7,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SurveyComponent } from './survey/survey.component';
 import { ModalModule } from './_modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgMediumModule } from 'ng-medium';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LandingPageComponent,
-    SurveyComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ModalModule,
-    NgbModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent, LandingPageComponent, SurveyComponent],
+	imports: [BrowserModule, AppRoutingModule, ModalModule, NgbModule, NgMediumModule, FormsModule, ReactiveFormsModule],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,1 +1,39 @@
-<p>survey works!</p>
+<div class="container">
+    <div class="card shadow border-0">
+        <div class="card-body text-center" style="background-color: #fff;">
+            <div *ngIf="intro">
+                <h4 class="text-center" style="color: #071D49;"><b>How to implement blockchain technology on your company?</b></h4>
+                <hr style="width:75%;text-align:center">
+                <h5 class="text-center m-2" style="color: #071D49;">This survey asks about you and your company</h5><br>
+                <h5 class="text-center m-2" style="color: #071D49;">Based on your answers, we will suggest the best strategy for implementing blockchain technology on your company</h5><br>
+                <h5 class="text-center m-2" style="color: #071D49;">The average response time is <b>2 minutes</b></h5><br>
+                <button class="button btn-lg text-center m-2 p-2" style="background-color: #071D49;" (click)="start()"><b class="text-white">Take Survey</b></button><br>
+                <h6 class="text-center m-2" style="color: #071D49;"><b>Your data will not be recorded, unless you allow so in the contact form at the end of this survey</b></h6><br>
+            </div>
+            <div *ngIf="!(intro||pre||result)">
+                <h4 class="text-center" style="color: #071D49;"><b>{{selectedElement.question}}</b></h4>
+                <hr style="width:75%;text-align:center">
+                <form [formGroup]="form">
+                    <div data-toggle="buttons">
+                        <div class="text-center" *ngFor="let option of selectedElement.options; let i = index">
+                            <label class="btn btn-secondary btn-lg btn-block my-2" style="background-color: #fff;"><input formControlName="answers" type="radio" name="answers" [value]="i" [checked]="i==0"><b class="m-2" style="color: #071D49;font-size: large;">{{option.name}}</b></label>
+                        </div>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-end">
+                    <button class="button btn-lg m-4 p-2" style="background-color: #071D49;" (click)="next()"><b class="text-white">Next</b></button><br>
+                </div>
+            </div>
+            <div *ngIf="pre">
+                <h4 class="text-center" style="color: #071D49;"><b>These use cases for blockchain are already yelding great results</b></h4>
+                <hr style="width:75%;text-align:center">
+                <div class="col-md-12 justify-content-center">
+                    <div class="row justify-content-center hideScroll" style="max-width: 100%; max-height: 800px; overflow-y: scroll;">
+                        <ng-medium-feed [feedUrl]="feedUrl" [styles]="feedStyle"></ng-medium-feed>
+                    </div>
+                </div>
+                <button class="button btn-lg text-center m-2 p-2" style="background-color: #071D49;" (click)="finish()"><b class="text-white">Finish</b></button><br>
+            </div>
+        </div>
+    </div>
+</div>

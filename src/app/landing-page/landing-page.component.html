@@ -250,16 +250,33 @@
 </main>
 
 <jw-modal id="popup-mouseleave">
-  <div id="donationInfo" class="modal-dialog modal-sm modal-dialog-centered">
-      <div class="modal-content">
-          <div class="modal-body p-0">
-              <div class="card shadow border-0 bg-gradient-success">
-                  <div class="card-header justify-content-center bg-gradient-success">
-                      <h4 class="text-center text-white">Hello World</h4>
-                      <button type="button" (click)="closeModal('popup-mouseleave')" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div id="popupInfo" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="card shadow border-0">
+                    <div class="card-header justify-content-center" style="background-color: #071D49;">
+                        <button type="button btn-right" (click)="closeModal('popup-mouseleave')" class="close text-white" data-dismiss="modal">&times;</button>
+                        <h4 class="text-center text-white"><b>Do you know how blockchain can help your business?</b></h4>
+                    </div>
+                    <div class="card-body text-center" style="background-color: #fff;">
+                        <h4 class="text-center" style="color: #071D49;"><b>These use cases for blockchain are already yelding great results</b></h4>
+                        <hr style="width:75%;text-align:center">
+                        <div class="col-md-12 justify-content-center">
+                            <div class="row justify-content-center hideScroll" style="max-width: 100%; max-height: 500px; overflow-y: scroll;">
+                                <ng-medium-feed [feedUrl]="feedUrl" [styles]="feedStyle"></ng-medium-feed>
+                            </div>
+                        </div>
+                        <hr style="width:75%;text-align:center">
+                        <br>
+                        <h4 class="text-center m-2" style="color: #071D49;">Take a survey to know how to implement blockchain technology on your company, and earn curated material*</h4>
+                        <br>
+                        <a class="button btn-lg text-center m-2 p-2" style="background-color: #071D49;" [routerLink]="['/survey']" (click)="closeModal('popup-mouseleave')" data-dismiss="modal"><b class="text-white">Take Survey</b></a>
+                        <br>
+                        <br>
+                        <h6 class="text-center m-2" style="color: #071D49;">*Fill your contact info at the end to receive curated content based on your answers</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </jw-modal>

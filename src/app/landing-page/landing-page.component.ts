@@ -1,6 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ModalService } from '../_modal';
 import exitIntent from 'exit-intent';
+import { NgMediumStyles } from 'ng-medium/lib/models/ngMediumStyles';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'app-landing-page',
@@ -8,7 +10,11 @@ import exitIntent from 'exit-intent';
 	styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit {
-	constructor(private modalService: ModalService) {}
+  constructor(private modalService: ModalService) {}
+
+  feedUrl = environment.mediumFeedUrl;
+
+  feedStyle: NgMediumStyles = environment.mediumStyle;
 
 	ngOnInit(): void {
     const removeExitIntent = exitIntent({
