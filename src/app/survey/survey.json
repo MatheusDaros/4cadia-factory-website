@@ -28,7 +28,7 @@
 		]
 	},
 	"startup3": {
-		"question": "Are you following Lean methodologies for prototyping your solution and validating your value proposal?",
+		"question": "Are you following lean methodologies for prototyping your solution and validating your value proposal?",
 		"options": [
 			{ "name": "No", "value1": 4, "value2": 0, "target": "startup4" },
 			{ "name": "Yes", "value1": 0, "value2": 5, "target": "startup4" }
@@ -52,8 +52,8 @@
 	"startup6": {
 		"question": "Do you have positive operational results?",
 		"options": [
-			{ "name": "No", "value1": 3, "value2": 0, "target": "finish" },
-			{ "name": "Yes", "value1": 0, "value2": 5, "target": "finish" }
+			{ "name": "No", "value1": 3, "value2": 0, "target": "finish-startup" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "finish-startup" }
 		]
 	},
 	"company1": {
