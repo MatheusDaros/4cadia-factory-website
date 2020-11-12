@@ -90,6 +90,9 @@
                             <label class="form-check-label" for="agree">I allow my data to be collected and stored</label>
                         </div>
                         <button type="submit" class="button btn-lg text-center m-2 p-2" [ngStyle]="{'background-color': formContact.invalid ? '#f6f6f6' : '#071D49'}" [disabled]="formContact.invalid"><b class="text-white">Send</b></button>
+                        <div class="d-flex justify-content-center">
+                            <re-captcha (resolved)="resolved($event)" siteKey="6Le6TuIZAAAAAJZOL4XIH2o4BIm-a0zSV1Z9VYtF" style="display: inline-block;"></re-captcha>
+                        </div>
                     </form>
                 </div>
             </div>

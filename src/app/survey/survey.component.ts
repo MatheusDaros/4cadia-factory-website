@@ -55,6 +55,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
 			phone: [""],
 			terms: [false, Validators.requiredTrue],
 			agree: [false, Validators.requiredTrue],
+			captcha: [false, Validators.requiredTrue]
 		});
 		this.surveyElements = (surveyTable as any).default;
 		this.scoreOut = 0;
@@ -147,4 +148,9 @@ export class SurveyComponent implements OnInit, OnDestroy {
 		this.firestore.collection("survey-leads").add(payload);
 		this.router.navigate(['/']);
 	}
+
+	resolved(captchaResponse: string) {
+		if (!captchaResponse) this.form.controls.captcha.patchValue(false);
+		else this.formContact.controls.captcha.patchValue(true);
+    }
 }

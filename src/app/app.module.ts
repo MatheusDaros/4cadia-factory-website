@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgMediumModule } from "ng-medium";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
 	declarations: [AppComponent, LandingPageComponent, SurveyComponent],
@@ -24,7 +25,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 		FormsModule,
 		ReactiveFormsModule,
 		AngularFireModule.initializeApp(environment.firebaseConfig),
-		AngularFirestoreModule
+		AngularFirestoreModule,
+		RecaptchaModule,
+		RecaptchaFormsModule 
 	],
 	providers: [],
 	bootstrap: [AppComponent],
