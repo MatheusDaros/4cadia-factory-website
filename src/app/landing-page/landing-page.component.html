@@ -15,10 +15,13 @@
             <img class="symbol-a" src="../assets/images/symbol-group-a.svg" alt="symbol a" />
             <h1>About</h1>
             <p>
-                4CADIA Factory is a blockchain focused software house that provide services for consulting and development of applications and systems, both on centralized and decentralized models.
+                4CADIA Factory is a blockchain focused software house that provide services for consulting and
+                development of applications and systems, both on centralized and decentralized models.
             </p>
             <p>
-                4CADIA factory has a group of software engineers, programmers and architects ready to supply the best solutions for your software development needs, constantly trained for proficiency in the most recent technologies.
+                4CADIA factory has a group of software engineers, programmers and architects ready to supply the best
+                solutions for your software development needs, constantly trained for proficiency in the most recent
+                technologies.
             </p>
         </div>
     </section>
@@ -157,20 +160,23 @@
                     <img class="mobile-images" src="../assets/images/process/Frame_1.svg" alt="Frame 1" />
                     <h4>Architecture</h4>
                     <p>
-                        First our architects research and document all requirements and constraints, use cases, personas, processes and development models.
+                        First our architects research and document all requirements and constraints, use cases,
+                        personas, processes and development models.
                     </p>
                 </li>
                 <li>
                     <img class="mobile-images" src="../assets/images/process/Frame_2.svg" alt="Frame 2" />
                     <h4>Development</h4>
                     <p>
-                        With agile methodology, development is broken down into small steps for accurate estimation and customer quality assurance.
+                        With agile methodology, development is broken down into small steps for accurate estimation and
+                        customer quality assurance.
                     </p>
                 </li>
                 <li>
                     <img class="mobile-images" src="../assets/images/process/Frame_3.svg" alt="Frame 3" />
                     <h4>Delivery</h4>
-                    <p>Production delivery is carefully coordinated to ensure application quality and safety standards.</p>
+                    <p>Production delivery is carefully coordinated to ensure application quality and safety standards.
+                    </p>
                 </li>
             </ul>
             <div class="process-images"><img src="../assets/images/process.svg" alt="" /></div>
@@ -178,12 +184,14 @@
                 <li>
                     <img class="mobile-images" src="../assets/images/process/Frame_4.svg" alt="Frame 4" />
                     <h4>Planning</h4>
-                    <p>Development begins when engineers align what needs to be done and plan each requirement to be delivered.</p>
+                    <p>Development begins when engineers align what needs to be done and plan each requirement to be
+                        delivered.</p>
                 </li>
                 <li>
                     <img class="mobile-images" src="../assets/images/process/Frame_5.svg" alt="Frame 5" />
                     <h4>Implementation</h4>
-                    <p>Each approved feature is packaged as a new increment of the application continuously and automatically.</p>
+                    <p>Each approved feature is packaged as a new increment of the application continuously and
+                        automatically.</p>
                 </li>
                 <li>
                     <img class="mobile-images" src="../assets/images/process/Frame_6.svg" alt="Frame 6" />
@@ -255,25 +263,43 @@
             <div class="modal-body p-0">
                 <div class="card shadow border-0">
                     <div class="card-header justify-content-center" style="background-color: #071D49;">
-                        <button type="button btn-right" (click)="closeModal('popup-mouseleave')" class="close text-white" data-dismiss="modal">&times;</button>
-                        <h4 class="text-center text-white"><b>Do you know how blockchain can help your business?</b></h4>
+                        <button type="button btn-right" (click)="closeModal('popup-mouseleave')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h4 class="text-center text-white"><b>Use Blockchain technology to put your business ahead of
+                                your competitors</b></h4>
                     </div>
                     <div class="card-body text-center" style="background-color: #fff;">
-                        <h4 class="text-center" style="color: #071D49;"><b>These use cases for blockchain are already yelding great results</b></h4>
+                        <h4 class="text-center m-2" style="color: #071D49;">Do you have an idea or project to use
+                            Blockchain technology inside your company?</h4>
+                        <h4 class="text-center m-2" style="color: #071D49;">Take this survey to know the best strategy
+                            to deliver this project *</h4>
+                        <br>
+                        <a class="button btn-lg text-center m-2 p-2" style="background-color: #071D49;"
+                            [routerLink]="['/survey']" (click)="closeModal('popup-mouseleave')" data-dismiss="modal"><b
+                                class="text-white">Take survey</b></a>
+                        <br>
+                        <br>
+                        <h6 class="text-center m-2" style="color: #071D49;">*Fill your contact info at the end to
+                            receive curated content based on your answers</h6>
                         <hr style="width:75%;text-align:center">
-                        <div class="col-md-12 justify-content-center">
-                            <div class="row justify-content-center hideScroll" style="max-width: 100%; max-height: 500px; overflow-y: scroll;">
+                        <br>
+                        <h4 class="text-center mb-4" style="color: #071D49;"><b>Discover how Blockchain technology can help
+                                your business</b></h4>
+                        <form [formGroup]="form">
+                            <select class="custom-select" formControlName="industry" (change)="changeForm()">
+                                <option value="" disabled>Choose your industry</option>
+                                <option *ngFor="let option of Industry" [ngValue]="option">{{option}}
+                                </option> 
+                            </select>
+                        </form>
+                        <div *ngIf="this.form.controls.industry.value" class="col-md-12 justify-content-center mt-4">
+                            <hr style="width:75%;text-align:center">
+                            <div class="row justify-content-center hideScroll"
+                                style="max-width: 100%; max-height: 500px; overflow-y: scroll;">
                                 <ng-medium-feed [feedUrl]="feedUrl" [styles]="feedStyle"></ng-medium-feed>
                             </div>
                         </div>
-                        <hr style="width:75%;text-align:center">
                         <br>
-                        <h4 class="text-center m-2" style="color: #071D49;">Take a survey to know how to implement blockchain technology on your company, and earn curated material*</h4>
-                        <br>
-                        <a class="button btn-lg text-center m-2 p-2" style="background-color: #071D49;" [routerLink]="['/survey']" (click)="closeModal('popup-mouseleave')" data-dismiss="modal"><b class="text-white">Take Survey</b></a>
-                        <br>
-                        <br>
-                        <h6 class="text-center m-2" style="color: #071D49;">*Fill your contact info at the end to receive curated content based on your answers</h6>
                     </div>
                 </div>
             </div>

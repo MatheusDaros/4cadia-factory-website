@@ -42,7 +42,7 @@ export const environment = {
     }
   },
 
-  mediumFeedUrl: "https://medium.com/feed/@4cadia"
+  mediumFeedUrl: "https://medium.com/feed/4cadia"
 };
 
 /*
