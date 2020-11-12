@@ -1,13 +1,15 @@
-import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { NgMediumStyles } from 'ng-medium/lib/models/ngMediumStyles';
-import { environment } from 'src/environments/environment';
-import * as surveyTable from './survey.json';
+import { Component, ElementRef, OnDestroy, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { NgMediumStyles } from "ng-medium/lib/models/ngMediumStyles";
+import { environment } from "src/environments/environment";
+import { AngularFirestore } from '@angular/fire/firestore';
+import * as surveyTable from "./survey.json";
+import { Router } from '@angular/router';
 
 @Component({
-	selector: 'app-survey',
-	templateUrl: './survey.component.html',
-	styleUrls: ['./survey.component.css'],
+	selector: "app-survey",
+	templateUrl: "./survey.component.html",
+	styleUrls: ["./survey.component.css"],
 })
 export class SurveyComponent implements OnInit, OnDestroy {
 	feedUrl = environment.mediumFeedUrl;
@@ -41,16 +43,16 @@ export class SurveyComponent implements OnInit, OnDestroy {
 
 	surveyElements: any;
 
-	constructor(private elementRef: ElementRef, private formBuilder: FormBuilder) {
+	constructor(private elementRef: ElementRef, private formBuilder: FormBuilder, private router: Router, private firestore: AngularFirestore) {
 		this.form = this.formBuilder.group({
-			answers: [''],
+			answers: [""],
 		});
 		this.formContact = this.formBuilder.group({
-			name: ['', Validators.required],
-			company: [''],
-			role: [''],
-			email: ['', Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
-			phone: [''],
+			name: ["", Validators.required],
+			company: [""],
+			role: [""],
+			email: ["", Validators.compose([Validators.required, Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])],
+			phone: [""],
 			terms: [false, Validators.requiredTrue],
 			agree: [false, Validators.requiredTrue],
 		});
@@ -64,7 +66,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
 
 	ngOnInit(): void {
 		this.savedBg = this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor;
-		this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#071D49';
+		this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "#071D49";
 		this.intro = true;
 		this.result = false;
 	}
@@ -75,7 +77,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
 
 	start() {
 		this.intro = false;
-		this.setForm('start');
+		this.setForm("start");
 		this.startTime = new Date();
 		this.lastTime = new Date();
 	}
@@ -88,29 +90,29 @@ export class SurveyComponent implements OnInit, OnDestroy {
 		this.scoreIn += selectedOption.value2;
 		this.answerTable.push({ question: this.selectedElement.question, answer: selectedOption.name, time: duration });
 		this.lastTime = new Date();
-		if (selectedOption.target.substr(0, 6) === 'finish') {
+		if (selectedOption.target.substr(0, 6) === "finish") {
 			this.pre = true;
 			this.result = true;
 			this.endTime = this.lastTime;
 			const outsource = this.scoreOut >= this.scoreIn;
-			this.resultStrategy = outsource ? 'outsource the project' : 'develop the project internally';
-			if (selectedOption.target === 'finish-startup') {
+			this.resultStrategy = outsource ? "outsource the project" : "develop the project internally";
+			if (selectedOption.target === "finish-startup") {
 				this.resultDescription = outsource
-					? 'Trying to develop blockchain projects internally in your startup at your stage might be very risky, and the re\
+					? "Trying to develop blockchain projects internally in your startup at your stage might be very risky, and the re\
           wards might not be worth it. You have high chances of spending your budget without generating much value from the\
            technology once (or if) your project is completed. Outsourcing your project with experts would considerably redu\
-          ce your risks, and could be very strategic to deliver high value from this project'
-					: 'Your startup has a lot of factors indicating that you should develop your blockchain MVP in-house. Outsourcing\
-           might be a good second option once your company reaches scale-up phase';
+          ce your risks, and could be very strategic to deliver high value from this project"
+					: "Your startup has a lot of factors indicating that you should develop your blockchain MVP in-house. Outsourcing\
+           might be a good second option once your company reaches scale-up phase";
 			} else {
 				this.resultDescription = outsource
-					? 'Trying to develop blockchain projects internally in your company at your state might be very risky, and the re\
+					? "Trying to develop blockchain projects internally in your company at your state might be very risky, and the re\
           wards might not be worth it. You have high chances of spending your budget without generating much value from the\
            technology once (or if) your project is completed. Outsourcing your project with experts would considerably redu\
-          ce your risks, and could be very strategic to deliver high value from this project'
-					: 'Your company or group is able to take care of blockchain projects internally. Congratulations!';
+          ce your risks, and could be very strategic to deliver high value from this project"
+					: "Your company or group is able to take care of blockchain projects internally. Congratulations!";
 			}
-		} else if (selectedOption.target === 'intro-article') {
+		} else if (selectedOption.target === "intro-article") {
 			this.pre = true;
 		} else {
 			this.setForm(selectedOption.target);
@@ -120,7 +122,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
 	setForm(id: string) {
 		this.selectedElement = this.surveyElements[id];
 		this.form = this.formBuilder.group({
-			answers: [''],
+			answers: [""],
 		});
 		this.form.controls.answers.patchValue(0);
 	}
@@ -142,6 +144,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
 			date: this.lastTime.toUTCString(),
 			score: { outsource: this.scoreOut, inhouse: this.scoreIn, diff: this.scoreOut - this.scoreIn },
 		};
-		console.log(payload);
+		this.firestore.collection("survey-leads").add(payload);
+		this.router.navigate(['/']);
 	}
 }

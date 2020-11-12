@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "acadia-website": {
+      "hosting": {
+        "FactoryWebsite": [
+          "acadia-website"
+        ]
+      }
+    }
+  }
+}
