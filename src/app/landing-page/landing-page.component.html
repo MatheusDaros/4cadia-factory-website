@@ -31,73 +31,73 @@
         <div class="development-content">
             <h2>Development</h2>
             <ul class="development-list">
-                <li>
-                    <div class="card-content">
+                <li (click)="openModal('info-dapps')">
+                    <div class="card-content" >
                         <img src="../assets/images/development/dapps.svg" alt="DApps" />
                         <h4>DApps and DAOs</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-webapp')">
                     <div class="card-content">
                         <img src="../assets/images/development/webapp.svg" alt="Web" />
                         <h4>Web Applications</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-smart')">
                     <div class="card-content">
                         <img src="../assets/images/development/smart.svg" alt="Smart" />
                         <h4>Smart Contracts</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-token')">
                     <div class="card-content">
                         <img src="../assets/images/development/token.svg" alt="Tokens" />
                         <h4>Tokens development</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-wallet')">
                     <div class="card-content">
                         <img src="../assets/images/development/wallet.svg" alt="Exchanges" />
                         <h4>Exchanges and Market Makers</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-gateways')">
                     <div class="card-content">
                         <img src="../assets/images/development/gateways.svg" alt="Gateways" />
                         <h4>Gateways</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-api')">
                     <div class="card-content">
                         <img src="../assets/images/development/api.svg" alt="API" />
                         <h4>API and Microservices</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-mobile')">
                     <div class="card-content">
                         <img src="../assets/images/development/mobile-dev.svg" alt="Hybrid" />
                         <h4>Hybrid Mobile Apps</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-algorithm')">
                     <div class="card-content">
                         <img src="../assets/images/development/algorithm.svg" alt="Data" />
                         <h4>Data and Algorithms</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-chatbots')">
                     <div class="card-content">
                         <img src="../assets/images/development/chatbots.svg" alt="Chatbots" />
                         <h4>Chatbots</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-ecommerce')">
                     <div class="card-content">
                         <img src="../assets/images/development/ecommerce.svg" alt="E" />
                         <h4>E-commerces</h4>
                     </div>
                 </li>
-                <li>
+                <li (click)="openModal('info-web3')">
                     <div class="card-content">
                         <img src="../assets/images/development/web3.svg" alt="Web3" />
                         <h4>Web3 Solutions</h4>
@@ -292,7 +292,8 @@
                             </div>
                         </div>
                     </div>
-                    <svg viewBox="0 0 600 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="20" style="background-color: #e8e1e1;">
+                    <svg viewBox="0 0 600 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="20"
+                        style="background-color: #e8e1e1;">
                         <g fill="none" fill-rule="evenodd">
                             <polygon fill="#ffffff"
                                 points="0 124 0 -21.986 43.159 5.845 85.03 31.074 128.833 5.845 171.348 14.704 216.439 5.845 258.954 12.778 301.469 -3.039 345.272 -33.244 387.143 -10.146 430.302 -5.037 473.461 -29.593 515.976 -21.986 560.423 -62.333 602.938 -71 602.938 124"
@@ -326,6 +327,223 @@
                                 <ng-medium-feed [feedUrl]="feedUrl" [styles]="feedStyle"></ng-medium-feed>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-dapps">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-dapps')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>dApps and DAOs</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>dApps (decentralized applications) are a new technology for building web and mobile applications, where all the important log is processed by <b>Smart Contracs</b>, granting security and transparency to all data being processed.</p>
+                        <p>DAOs (decentralized autonomous organizations) take this concept even further, where <b>whole systems</b> or even <b>whole organizations</b> can be operated and governed using <b>Smart Contracts</b>, without any central controller.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-webapp">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-webapp')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Web Applications</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Web applications are the current most used way to provide applications to users. These applications can be run by almost any browser, and <b>does not require any kind of instalation</b> to run.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-smart">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-smart')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Smart Contracts</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Smart contracts are special designed code that run in specific <b>Virtual Machines</b> emulated by blockchain transactions. These contracts are <b>completely tamper proof</b> due to its imutable code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-token">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-token')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Tokens</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Tokens are virtual representations of value inside blockchains. They may relate to <b>any kind of asset</b>, depending on its token mechanics. These assets can be transfered freely without interference of any central authority.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-wallet">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-wallet')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Exchanges and Market Makers</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Exchanges are applications that connect <b>buyers and sellers</b> of assets. Often they require <b>Market Makers</b> to automatically handle orders to provide liquidity or conduct price movements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-gateways">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-gateways')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Token Gateways</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Token Gateways are used to convert <b>fiat currency value</b> to tokenized assets, using providers for this service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-api">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-api')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>API and Microservices</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>APIs are applications for <b>machine to machine</b> interactions, used for conencting systems and servers. The use of <b>Microservices</b> allow for optimised systems that connect tho each other.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-mobile">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-mobile')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Hybrid Mobile Apps</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Mobile applications are designed for being installed and run in mobile devices like smart phones, tablets and smart watches. Hybrid apps are able to run on <b>Android and iOS with the same codebase</b>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-algorithm">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-algorithm')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Data and Algorithms</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Handling Data and Algorithms allow for companies to <b>predict</b> and/or <b>optmize</b> processes and strategies, depending on the amount and quality of data gathered.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-chatbots">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-chatbots')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Chatbots</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Chatbots ars applications that allow users to chat with an <b>automated interlocutor</b>, that may answer to pre-configured questions or even <b>AI based dialogs</b>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-ecommerce">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-ecommerce')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>E-commerces</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>E-commerces are applications for consumers to be able to purchase goods and services over the internet, <b>without the need to go to a phisical store</b>. Very common since the early 2000s, these applications have evolved to provide a set of amazing capabilities, like <b>offering curated products based on sonsumer profile</b>, handling <b>stock and promotions autonomously</b> and even managing the <b>logistics and payment</b> operations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</jw-modal>
+<jw-modal id="info-web3">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content p-0 m-0">
+            <div class="modal-body p-0 m-0">
+                <div class="card shadow border-0 p-0 m-0">
+                    <div class="card-header justify-content-center" style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+                        <button type="button btn-right" (click)="closeModal('info-web3')"
+                            class="close text-white" data-dismiss="modal">&times;</button>
+                        <h2 class="text-center text-white"><b>Web3 Solutions</b></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>The so-called web 3.0 is a natural evolution from the internet we have nowaday, where <b>you are in control of your own data</b>. Web 3.0 opens a whole new horizon of <b>new opportunities</b> for almost all industries that currently operate using internet-based services.</p>
                     </div>
                 </div>
             </div>

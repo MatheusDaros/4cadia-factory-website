@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from "@angular/core";
 import { ModalService } from "../_modal";
-import exitIntent from "exit-intent-mobile";
+import exitIntent from "../../../node_modules/exit-intent-mobile-bugfix/src/exit-intent.js"
 import { NgMediumStyles } from "ng-medium/lib/models/ngMediumStyles";
 import { environment } from "src/environments/environment";
 import { FormBuilder, FormGroup } from "@angular/forms";
@@ -27,7 +27,6 @@ export class LandingPageComponent implements OnInit {
 
 	ngOnInit(): void {
 		const removeExitIntent = exitIntent({
-			threshold: 50,
 			maxDisplays: 1,
 			eventThrottle: 100,
 			showAfterInactiveSecondsDesktop: 30,
