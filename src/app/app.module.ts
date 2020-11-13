@@ -13,9 +13,11 @@ import { NgMediumModule } from "ng-medium";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
+import { LandingSurveyComponent } from './landing-survey/landing-survey.component';
+import { SurveyPageComponent } from './survey-page/survey-page.component';
 
 @NgModule({
-	declarations: [AppComponent, LandingPageComponent, SurveyComponent],
+	declarations: [AppComponent, LandingPageComponent, SurveyComponent, LandingSurveyComponent, SurveyPageComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,

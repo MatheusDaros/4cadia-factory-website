@@ -1,0 +1,66 @@
+<div class="card shadow border-0 p-0 m-0">
+    <div class="card-header justify-content-center"
+        style="background-image: linear-gradient(to bottom right, #103c92, #071D49) ;">
+        <h2 class="text-center text-white"><b>Use Blockchain technology to put your business ahead of
+                your competitors</b></h2>
+    </div>
+    <div class="card-body text-center" style="background-color: #fff;">
+        <h2 class="text-center m-2"
+            style="color: rgb(39, 41, 42); font-size: large; font-family: 'Poppins', sans-serif;">
+            <b>Are you already planning a project based on Blockchain technology?</b></h2>
+        <h2 class="text-center m-2"
+            style="color: rgb(39, 41, 42); font-size: medium;font-family: 'Poppins', sans-serif;">Here
+            is an assessment from world renowned Blockchain experts that shows when it is better to
+            outsource and when it is better to develop your solution in house. Avoid failed projects and
+            protect your investment.</h2><br>
+        <div class="d-flex justify-content-center my-2">
+            <div class="mx-4 text-center col-lg-9">
+                <a class="button btn-lg btn-outline-primary text-center p-2 btn-block"
+                    style="background-color: #7ec392;" [routerLink]="['/survey']"
+                    data-dismiss="modal"><b
+                        class="text-white">Take the survey - 2 minutes</b></a>
+                <h6 class="text-center my-3"
+                    style="color: rgb(39, 41, 42); font-size: small; font-weight: lighter; font-family: 'Poppins', sans-serif;">
+                    * Fill your contact info at the end to receive curated content that will help you
+                    get your
+                    project done, on budget and on time.</h6>
+            </div>
+        </div>
+    </div>
+    <svg viewBox="0 0 600 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="20"
+        style="background-color: #e8e1e1;">
+        <g fill="none" fill-rule="evenodd">
+            <polygon fill="#ffffff"
+                points="0 124 0 -21.986 43.159 5.845 85.03 31.074 128.833 5.845 171.348 14.704 216.439 5.845 258.954 12.778 301.469 -3.039 345.272 -33.244 387.143 -10.146 430.302 -5.037 473.461 -29.593 515.976 -21.986 560.423 -62.333 602.938 -71 602.938 124"
+                opacity=".455" transform="rotate(180 301.469 26.5)"></polygon>
+            <polygon fill="#ffffff"
+                points=".24 97 .24 70.097 42.755 61.557 85.914 64.973 129.073 24.27 172.232 43.195 215.391 24.27 259.194 36.789 301.709 39.351 344.868 6.043 387.383 8.178 431.186 18.427 474.345 -14.027 517.504 -14.027 560.663 -40.503 603.178 -61 603.178 97"
+                opacity=".365" transform="rotate(180 301.709 18)"></polygon>
+            <polygon fill="#ffffff"
+                points=".24 102 .24 82.249 42.755 75.978 85.914 78.486 129.717 59.676 172.232 62.497 216.035 66.573 259.194 57.795 301.709 59.676 344.868 35.222 387.383 36.789 431.186 44.314 474.345 20.486 517.504 15.157 560.663 1.049 603.178 -14 603.178 102"
+                transform="rotate(180 301.709 44)"></polygon>
+        </g>
+    </svg>
+    <div class="card-footer p-2 border-0" style="background-color: #e8e1e1;">
+        <h4 class="text-center mb-0"
+            style="color: rgb(39, 41, 42); font-size: large; font-family: 'Poppins', sans-serif;"><b>Not
+                sure how to utilize Blockchain technology in your industry?</b></h4>
+        <h4 class="text-center mb-2"
+            style="color: rgb(39, 41, 42); font-size: medium; font-weight: light; font-family: 'Poppins', sans-serif;">
+            Choose your industry to see how it can transform your business:</h4>
+        <form [formGroup]="form">
+            <select class="custom-select mb-2" formControlName="industry" (change)="changeForm()">
+                <option value="" disabled>Choose your industry</option>
+                <option *ngFor="let option of Industry" [ngValue]="option">{{option}}
+                </option>
+            </select>
+        </form>
+        <div *ngIf="this.form.controls.industry.value" class="col-md-12 justify-content-center my-4">
+            <hr style="width:75%;text-align:center">
+            <div class="row justify-content-center hideScroll"
+                style="max-width: 100%; max-height: 500px; overflow-y: scroll;">
+                <ng-medium-feed [feedUrl]="feedUrl" [styles]="feedStyle"></ng-medium-feed>
+            </div>
+        </div>
+    </div>
+</div>
