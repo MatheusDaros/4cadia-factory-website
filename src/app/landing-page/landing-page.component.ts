@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from "@angular/core";
 import { ModalService } from "../_modal";
-import exitIntent from "exit-intent";
+import exitIntent from "exit-intent-mobile";
 import { NgMediumStyles } from "ng-medium/lib/models/ngMediumStyles";
 import { environment } from "src/environments/environment";
 import { FormBuilder, FormGroup } from "@angular/forms";
@@ -30,6 +30,8 @@ export class LandingPageComponent implements OnInit {
 			threshold: 50,
 			maxDisplays: 1,
 			eventThrottle: 100,
+			showAfterInactiveSecondsDesktop: 30,
+			showAfterInactiveSecondsMobile: 5,
 			onExitIntent: () => {
 				this.onMouseLeave();
 			},
