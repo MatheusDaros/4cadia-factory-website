@@ -1,0 +1,198 @@
+{
+	"start": {
+		"question": "Is your company planning to use blockchain in a project?",
+		"options": [
+			{ "name": "No", "value1": 0, "value2": 0, "target": "intro-article" },
+			{ "name": "Yes", "value1": 0, "value2": 0, "target": "question1" }
+		]
+	},
+	"question1": {
+		"question": "Is your company a startup",
+		"options": [
+			{ "name": "No", "value1": 0, "value2": 0, "target": "company1" },
+			{ "name": "Yes", "value1": 0, "value2": 0, "target": "startup1" }
+		]
+	},
+	"startup1": {
+		"question": "Is one of your founders and/or core staff an expert on blockchain development and architecture?",
+		"options": [
+			{ "name": "No", "value1": 5, "value2": 0, "target": "startup2" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "startup2" }
+		]
+	},
+	"startup2": {
+		"question": "Are your competitors already in the process of adopting blockchain in your industry?",
+		"options": [
+			{ "name": "No", "value1": 0, "value2": 2, "target": "startup3" },
+			{ "name": "Yes", "value1": 3, "value2": 0, "target": "startup3" }
+		]
+	},
+	"startup3": {
+		"question": "Are you following lean methodologies for prototyping your solution and validating your value proposal?",
+		"options": [
+			{ "name": "No", "value1": 4, "value2": 0, "target": "startup4" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "startup4" }
+		]
+	},
+	"startup4": {
+		"question": "What is your time-to-market target?",
+		"options": [
+			{ "name": "Short", "value1": 3, "value2": 0, "target": "startup5" },
+			{ "name": "Medium", "value1": 1, "value2": 0, "target": "startup5" },
+			{ "name": "Long", "value1": 0, "value2": 5, "target": "startup5" }
+		]
+	},
+	"startup5": {
+		"question": "Do you have a budget and/our equity share available for outsourcing?",
+		"options": [
+			{ "name": "No", "value1": 0, "value2": 10, "target": "startup6" },
+			{ "name": "Yes", "value1": 3, "value2": 0, "target": "startup6" }
+		]
+	},
+	"startup6": {
+		"question": "Do you have positive operational results?",
+		"options": [
+			{ "name": "No", "value1": 3, "value2": 0, "target": "finish-startup" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "finish-startup" }
+		]
+	},
+	"company1": {
+		"question": "What is the size of your company",
+		"options": [
+			{ "name": "Small", "value1": 0, "value2": 0, "target": "company2" },
+			{ "name": "Medium", "value1": 0, "value2": 0, "target": "company2" },
+			{ "name": "Large", "value1": 0, "value2": 0, "target": "company7" },
+			{ "name": "Huge", "value1": 0, "value2": 0, "target": "company7" }
+		]
+	},
+	"company2": {
+		"question": "Does your company have an IT department?",
+		"options": [
+			{ "name": "No", "value1": 5, "value2": 0, "target": "company3" },
+			{ "name": "Yes", "value1": 0, "value2": 0, "target": "company5" }
+		]
+	},
+	"company3": {
+		"question": "Are you considering setting up an entire IT department for this project?",
+		"options": [
+			{ "name": "No", "value1": 5, "value2": 0, "target": "company4" },
+			{ "name": "Yes", "value1": 0, "value2": 0, "target": "company5" }
+		]
+	},
+	"company4": {
+		"question": "Do you have any partner that would be able to dedicate a team to take care of the development of this project?",
+		"options": [
+			{ "name": "No", "value1": 1, "value2": 0, "target": "finish" },
+			{ "name": "Yes", "value1": 0, "value2": 0, "target": "company5" }
+		]
+	},
+	"company5": {
+		"question": "Is this IT team experienced with blockchain development and arcitecture?",
+		"options": [
+			{ "name": "No", "value1": 5, "value2": 0, "target": "company6" },
+			{ "name": "Yes", "value1": 0, "value2": 10, "target": "company6" }
+		]
+	},
+	"company6": {
+		"question": "Do you have any directors and/or managers experienced with leading IT teams?",
+		"options": [
+			{ "name": "No", "value1": 5, "value2": 0, "target": "company14" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "company13" }
+		]
+	},
+	"company7": {
+		"question": "Is your Product Development team experienced with blockchain projects?",
+		"options": [
+			{ "name": "No", "value1": 2, "value2": 0, "target": "company8" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "company8" }
+		]
+	},
+	"company8": {
+		"question": "Does your company have Innovation Management capabilities?",
+		"options": [
+			{ "name": "No", "value1": 0, "value2": 2, "target": "company9" },
+			{ "name": "Yes", "value1": 5, "value2": 0, "target": "company9" }
+		]
+	},
+	"company9": {
+		"question": "Are you satisfied with your IT team accuracy, efficiency and speed?",
+		"options": [
+			{ "name": "Totally", "value1": 0, "value2": 5, "target": "company10" },
+			{ "name": "Average", "value1": 0, "value2": 2, "target": "company10" },
+			{ "name": "A little", "value1": 2, "value2": 0, "target": "company10" },
+			{ "name": "Not at all", "value1": 5, "value2": 0, "target": "company10" }
+		]
+	},
+	"company10": {
+		"question": "Is your IT team experienced with blockchain development and arcitecture?",
+		"options": [
+			{ "name": "No", "value1": 10, "value2": 0, "target": "company11" },
+			{ "name": "Yes", "value1": 0, "value2": 10, "target": "company12" }
+		]
+	},
+	"company11": {
+		"question": "Do you have a good structure to provide practical in-depth training for your development staff?",
+		"options": [
+			{ "name": "No", "value1": 5, "value2": 0, "target": "company12" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "company12" }
+		]
+	},
+	"company12": {
+		"question": "What is the maturity level of your IT processes?",
+		"options": [
+			{ "name": "0 - Go Horse!", "value1": 10, "value2": 0, "target": "company6" },
+			{ "name": "1 - Initial", "value1": 5, "value2": 0, "target": "company6" },
+			{ "name": "2 - Managed", "value1": 2, "value2": 0, "target": "company6" },
+			{ "name": "3 - Defined", "value1": 0, "value2": 1, "target": "company6" },
+			{ "name": "4 - Controlled", "value1": 0, "value2": 2, "target": "company6" },
+			{ "name": "5 - Optimized", "value1": 0, "value2": 5, "target": "company6" }
+		]
+	},
+	"company13": {
+		"question": "Is that person or team experienced with blockchain?",
+		"options": [
+			{ "name": "No", "value1": 10, "value2": 0, "target": "company15" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "company15" }
+		]
+	},
+	"company14": {
+		"question": "Are you an expert with blockchain development and architecture?",
+		"options": [
+			{ "name": "No", "value1": 10, "value2": 0, "target": "company15" },
+			{ "name": "Yes", "value1": 0, "value2": 5, "target": "company15" }
+		]
+	},
+	"company15": {
+		"question": "Is your team used to agile and/or lean methodologies?",
+		"options": [
+			{ "name": "No", "value1": 5, "value2": 0, "target": "company16" },
+			{ "name": "Yes", "value1": 0, "value2": 2, "target": "company16" },
+			{ "name": "I don't know", "value1": 5, "value2": 0, "target": "company16" }
+		]
+	},
+	"company16": {
+		"question": "What is the size of your budget for this project?",
+		"options": [
+			{ "name": "Very limited", "value1": 5, "value2": 0, "target": "company17" },
+			{ "name": "Small", "value1": 10, "value2": 0, "target": "company17" },
+			{ "name": "Medium", "value1": 5, "value2": 0, "target": "company17" },
+			{ "name": "Large", "value1": 0, "value2": 5, "target": "company17" },
+			{ "name": "Almost unlimited", "value1": 0, "value2": 10, "target": "company17" }
+		]
+	},
+	"company17": {
+		"question": "What is the time-frame for your project?",
+		"options": [
+			{ "name": "Short (less than 6 months)", "value1": 5, "value2": 0, "target": "company18" },
+			{ "name": "Medium (6 to 12 months)", "value1": 2, "value2": 0, "target": "company18" },
+			{ "name": "Long (12+ months)", "value1": 0, "value2": 5, "target": "company18" }
+		]
+	},
+	"company18": {
+		"question": "Are your competitors already in the process of adopting blockchain in your industry?",
+		"options": [
+			{ "name": "No", "value1": 0, "value2": 2, "target": "finish" },
+			{ "name": "Yes", "value1": 5, "value2": 0, "target": "finish" }
+		]
+	}
+}
