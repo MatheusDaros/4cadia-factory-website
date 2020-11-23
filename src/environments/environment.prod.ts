@@ -38,5 +38,16 @@ export const environment = {
     }
   },
 
-  mediumFeedUrl: "https://medium.com/feed/@4cadia"
+  mediumFeedUrl: "https://medium.com/feed/4cadia",
+
+	firebaseConfig: {
+		apiKey: "AIzaSyCd98jJWSkaX2HuBaFu99ZbRbwyJYXMQm4",
+		authDomain: "acadia-website.firebaseapp.com",
+		databaseURL: "https://acadia-website.firebaseio.com",
+		projectId: "acadia-website",
+		storageBucket: "acadia-website.appspot.com",
+		messagingSenderId: "823229869132",
+		appId: "1:823229869132:web:95fa874f8df1988ed7d8e9",
+		measurementId: "G-XDZ4BB7JMJ",
+	}
 };

@@ -43,7 +43,7 @@
 		]
 	},
 	"startup5": {
-		"question": "Do you have budget and/our equity share available for outsourcing?",
+		"question": "Do you have a budget and/our equity share available for outsourcing?",
 		"options": [
 			{ "name": "No", "value1": 0, "value2": 10, "target": "startup6" },
 			{ "name": "Yes", "value1": 3, "value2": 0, "target": "startup6" }
@@ -66,21 +66,21 @@
 		]
 	},
 	"company2": {
-		"question": "Do your company have an IT sector?",
+		"question": "Does your company have an IT department?",
 		"options": [
 			{ "name": "No", "value1": 5, "value2": 0, "target": "company3" },
 			{ "name": "Yes", "value1": 0, "value2": 0, "target": "company5" }
 		]
 	},
 	"company3": {
-		"question": "Are you considering setting up an entire IT sector for this project?",
+		"question": "Are you considering setting up an entire IT department for this project?",
 		"options": [
 			{ "name": "No", "value1": 5, "value2": 0, "target": "company4" },
 			{ "name": "Yes", "value1": 0, "value2": 0, "target": "company5" }
 		]
 	},
 	"company4": {
-		"question": "Do you have any parner that would be able to dedicate a team to take care of the development of this project?",
+		"question": "Do you have any partner that would be able to dedicate a team to take care of the development of this project?",
 		"options": [
 			{ "name": "No", "value1": 1, "value2": 0, "target": "finish" },
 			{ "name": "Yes", "value1": 0, "value2": 0, "target": "company5" }
@@ -108,7 +108,7 @@
 		]
 	},
 	"company8": {
-		"question": "Do your company have Innovation Management capabilities?",
+		"question": "Does your company have Innovation Management capabilities?",
 		"options": [
 			{ "name": "No", "value1": 0, "value2": 2, "target": "company9" },
 			{ "name": "Yes", "value1": 5, "value2": 0, "target": "company9" }
@@ -166,7 +166,8 @@
 		"question": "Is your team used to agile and/or lean methodologies?",
 		"options": [
 			{ "name": "No", "value1": 5, "value2": 0, "target": "company16" },
-			{ "name": "Yes", "value1": 0, "value2": 2, "target": "company16" }
+			{ "name": "Yes", "value1": 0, "value2": 2, "target": "company16" },
+			{ "name": "I don't know", "value1": 5, "value2": 0, "target": "company16" }
 		]
 	},
 	"company16": {

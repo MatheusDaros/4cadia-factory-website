@@ -54,9 +54,9 @@
                     <p>{{resultDescription}}</p>
                 </div>
                 <hr style="width:75%;text-align:center">
-                <h4 class="text-center" style="color: #071D49;"><b>Do you want to know more about implementing blockchain projects?</b></h4>
-                <button class="button btn-lg text-center m-2 p-2" style="background-color: #071D49;" [routerLink]="['/']"><b class="text-white">No</b></button>
-                <button class="button btn-lg text-center m-2 p-2" style="background-color: #071D49;" (click)="final()"><b class="text-white">Yes</b></button>
+                <h4 class="text-center" style="color: #071D49;"><b>Do you know how to implement this strategy?</b></h4>
+                <button class="button btn-lg text-center m-2 p-2 btn-block" style="background-color: #071D49;" (click)="final()"><b class="text-white">Find out</b></button>
+                <button class="button btn-lg text-center m-2 p-2 btn-block" style="background-color: #071D49;" [routerLink]="['/']"><b class="text-white">Exit</b></button>
             </div>
             <div *ngIf="finalForm">
                 <h4 class="text-center" style="color: #071D49;"><b>Contact form</b></h4>
@@ -83,13 +83,16 @@
                         <input id="phone" name="phone" class="form-control" type="text" formControlName="phone">
                         <div class="form-group form-check mt-2">
                             <input type="checkbox" class="form-check-input" id="terms" formControlName="terms">
-                            <label class="form-check-label" for="terms">I accept the <a target="blank" href="/">terms and conditions</a> and the <a target="blank" href="/">privacy policy</a></label>
+                            <label class="form-check-label" for="terms">I accept the <a target="_blank" href="/assets/pdf/ToU.pdf">Terms of Use</a> and the <a target="_blank" href="/assets/pdf/PP.pdf">Privacy Policy</a></label>
                         </div>
                         <div class="form-group form-check mt-1">
                             <input type="checkbox" class="form-check-input" id="agree" formControlName="agree">
                             <label class="form-check-label" for="agree">I allow my data to be collected and stored</label>
                         </div>
                         <button type="submit" class="button btn-lg text-center m-2 p-2" [ngStyle]="{'background-color': formContact.invalid ? '#f6f6f6' : '#071D49'}" [disabled]="formContact.invalid"><b class="text-white">Send</b></button>
+                        <div class="d-flex justify-content-center">
+                            <re-captcha (resolved)="resolved($event)" siteKey="6Le6TuIZAAAAAJZOL4XIH2o4BIm-a0zSV1Z9VYtF" style="display: inline-block;"></re-captcha>
+                        </div>
                     </form>
                 </div>
             </div>
